@@ -1,0 +1,8 @@
+/home/host/Project/finish/apb2spi/rtl/apb_interface.v
+/home/host/Project/finish/apb2spi/rtl/apb_spi_master.v
+/home/host/Project/finish/apb2spi/rtl/clk_gen.v
+/home/host/Project/finish/apb2spi/rtl/fifo.v
+/home/host/Project/finish/apb2spi/rtl/spi_master_controller.v
+/home/host/Project/finish/apb2spi/rtl/spi_rx.v
+/home/host/Project/finish/apb2spi/rtl/spi_tx.v
+/home/host/Project/finish/apb2spi/tb/top_tb.v

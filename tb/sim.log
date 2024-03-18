@@ -1,0 +1,19 @@
+Command: /home/host/Project/finish/apb2spi/tb/./simv -l sim.log
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-1_Full64; Runtime version O-2018.09-1_Full64;  Mar 18 20:20 2024
+*Verdi* Loading libsscore_vcs201809.so
+FSDB Dumper for VCS, Release Verdi_O-2018.09-SP2, Linux x86_64/64bit, 02/21/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'top.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the MDAs, layer (0).
+*Verdi* : Enable +mda and +packedmda dumping.
+*Verdi* : End of traversing the MDAs.
+$finish called from file "/home/host/Project/finish/apb2spi/tb/top_tb.v", line 128.
+$finish at simulation time               115270
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 115270 ns
+CPU Time:      0.270 seconds;       Data structure size:   0.0Mb
+Mon Mar 18 20:20:33 2024

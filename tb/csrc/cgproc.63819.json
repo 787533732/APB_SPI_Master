@@ -1,0 +1,167 @@
+{
+    "stat": {
+        "peak_mem_kb": 283724,
+        "ru_self_end": {
+            "ru_utime_sec": 0.23652000000000001,
+            "ru_nivcsw": 11,
+            "ru_nvcsw": 29,
+            "ru_stime_sec": 0.046476999999999997,
+            "ru_maxrss_kb": 87292,
+            "ru_minflt": 29751,
+            "ru_majflt": 0
+        },
+        "ru_childs_end": {
+            "ru_utime_sec": 0.044936999999999998,
+            "ru_nivcsw": 19,
+            "ru_nvcsw": 27,
+            "ru_stime_sec": 0.031312,
+            "ru_maxrss_kb": 24272,
+            "ru_minflt": 10896,
+            "ru_majflt": 0
+        },
+        "cpu_cycles_end": 176615318244349
+    },
+    "ObjArchives": [
+        {
+            "objects": [
+                [
+                    "W0eJz_d.o",
+                    134938
+                ],
+                [
+                    "amcQwB.o",
+                    116312
+                ]
+            ],
+            "archive": "archive.0/_63819_archive_1.a",
+            "size": 251250
+        }
+    ],
+    "Modules": {
+        "...MASTER...": {
+            "child_modules": {
+                "top_tb": 1
+            },
+            "start_perf": [
+                0.22683811187744141,
+                0.12860099999999999,
+                0.038261000000000003,
+                270256,
+                283456,
+                1710764432.600826,
+                176615049533639
+            ],
+            "end_perf": [
+                0.23050308227539062,
+                0.13133800000000001,
+                0.039189000000000002,
+                272652,
+                283456,
+                176615058007749,
+                0,
+                0
+            ],
+            "nQuads": 0,
+            "nMops": 0,
+            "nRouts": 5
+        },
+        "top_tb": {
+            "child_modules": {},
+            "start_perf": [
+                0.23059797286987305,
+                0.131411,
+                0.039211000000000003,
+                272652,
+                283456,
+                1710764432.6045859,
+                176615058188913
+            ],
+            "Compiled": "Yes",
+            "Compiled Times": 1,
+            "significant_routs": [
+                [
+                    110,
+                    "R_VCSgd_W0eJz_6e",
+                    2774056,
+                    1600,
+                    300
+                ],
+                [
+                    112,
+                    "R_VCSgd_W0eJz_70",
+                    2371799,
+                    159,
+                    22
+                ],
+                [
+                    133,
+                    "R_VCSgd_W0eJz_85",
+                    3872218,
+                    1924,
+                    362
+                ],
+                [
+                    224,
+                    "R_VCSgd_W0eJz_e0",
+                    2593176,
+                    1824,
+                    216
+                ],
+                [
+                    244,
+                    "R_VCSgd_W0eJz_f4",
+                    2711692,
+                    985,
+                    99
+                ],
+                [
+                    252,
+                    "R_VCSgd_W0eJz_fc",
+                    2724258,
+                    828,
+                    91
+                ],
+                [
+                    254,
+                    "R_VCSgd_W0eJz_fe",
+                    3114430,
+                    1456,
+                    107
+                ]
+            ],
+            "end_perf": [
+                0.33909010887145996,
+                0.23424400000000001,
+                0.044372000000000002,
+                282036,
+                283456,
+                176615308202880,
+                38654705665,
+                0
+            ],
+            "nQuads": 3729,
+            "nMops": 9241,
+            "nRouts": 501
+        }
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mode": 4,
+            "mod": "...MASTER...",
+            "bytes": 7706,
+            "out": "objs/amcQw_d.o",
+            "text": 402,
+            "checksum": 0
+        },
+        "W0eJz_d": {
+            "mode": 4,
+            "mod": "top_tb",
+            "archive": "archive.0/_63819_archive_1.a",
+            "bytes": 134938,
+            "out": "W0eJz_d.o",
+            "text": 78512,
+            "checksum": 0
+        }
+    },
+    "reusePaths": {}
+}
