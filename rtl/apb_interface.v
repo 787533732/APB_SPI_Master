@@ -21,12 +21,13 @@ module apb_interface (
     input   wire            spi_data_rx_vld_i   ,
     output  wire [31:0]     stream_data_o       ,
     output  wire            stream_data_vld_o   ,
+    input   wire            stream_data_rdy_i   ,//反压信号
     output  wire [7:0]      spi_clk_div_o       ,
     output  wire            spi_clk_div_vld_o   ,
     
     input   wire            eot_i           
 );
-    assign pready_o = 1'b1;//无等待
+    assign pready_o  = stream_data_rdy_i;//反压信号
 
     wire   wr_en;
     wire   rd_en;
