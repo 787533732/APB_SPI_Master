@@ -24,9 +24,10 @@ module apb_spi_master (
     wire        spi_data_rx_vld_o;
     wire [31:0] stream_data_o;    
     wire        stream_data_vld_o;
+    wire        fifo_data_rdy_i;
     wire [31:0] fifo_data_o;
     wire        fifo_data_vld_o;
-    wire        fifo_data_rdy_i;
+    wire        fifo_data_rdy_o;
     
     apb_interface u_apb_interface(
         .pclk_i              (pclk_i            ),
@@ -44,6 +45,7 @@ module apb_spi_master (
         .spi_data_rx_vld_i   (spi_data_rx_vld_o ),
         .stream_data_o       (stream_data_o     ),
         .stream_data_vld_o   (stream_data_vld_o ),
+        .stream_data_rdy_i   (fifo_data_rdy_o   ),//反压信号
         .spi_clk_div_o       (spi_clk_div_o     ),
         .spi_clk_div_vld_o   (spi_clk_div_vld_o ),
         
@@ -55,7 +57,7 @@ module apb_spi_master (
          
         .data_i              (stream_data_o     ),
         .data_vld_i          (stream_data_vld_o ),
-        .data_rdy_o          (                  ),
+        .data_rdy_o          (fifo_data_rdy_o   ),//反压信号
          
         .data_o              (fifo_data_o       ),
         .data_vld_o          (fifo_data_vld_o   ),
