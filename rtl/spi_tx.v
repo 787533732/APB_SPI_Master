@@ -1,4 +1,5 @@
-module spi_tx (
+module spi_tx 
+(
     input   wire                clk_i           ,
     input   wire                rstn_i          ,
     input   wire                en_i            ,
@@ -11,10 +12,9 @@ module spi_tx (
     input   wire                tx_data_vld_i   ,
     output  wire                tx_data_rdy_o 
 );
-    //发送模块仅有IDLE和TRANSMIT两个状态
+
     localparam IDLE     = 0;
     localparam TRANSMIT = 1;
-
     reg [15:0] bit_cnt_trgt;
     reg [15:0] bit_cnt;
     wire       word_done;
@@ -23,7 +23,6 @@ module spi_tx (
     reg        tx_cs;
     reg        tx_ns;
     reg [31:0] tx_data;
-
     //传输的bit计数器
     always @(posedge clk_i or negedge rstn_i) begin
         if(!rstn_i) begin
@@ -36,8 +35,8 @@ module spi_tx (
         if(!rstn_i) begin
             bit_cnt <= 'd0;
         end else if(idle2transmit) begin//转换为传输状态时清零
-            bit_cnt <= 'd0;
-        end else if( (tx_cs == TRANSMIT) && tx_edge_i) begin //transmit状态且边沿到来时bit_cnt自增
+            bit_cnt <= 'd0; 
+        end else if( (tx_cs == TRANSMIT) && tx_edge_i) begin//transmit状态且边沿到来时bit_cnt自增
             bit_cnt <= bit_cnt + 1;
         end
     end
@@ -48,8 +47,7 @@ module spi_tx (
     //转移条件变量
     assign idle2transmit = (tx_cs == IDLE)     && en_i && tx_data_vld_i;//使能且数据有效
     assign transmit2idle = (tx_cs == TRANSMIT) && 
-    ((tx_done_o) || (word_done && ~tx_data_vld_i));//传输完成或 传完数据后数据无效
-
+    ((tx_done_o) || (word_done && ~tx_data_vld_i));//传输完成或传完数据后数据无效
     //1.状态更新
     always @(posedge clk_i or negedge rstn_i) begin
         if(!rstn_i) begin
@@ -63,7 +61,6 @@ module spi_tx (
         case(tx_cs)
             IDLE    : tx_ns = idle2transmit ? TRANSMIT : tx_cs;
             TRANSMIT: tx_ns = transmit2idle ? IDLE     : tx_cs;
-            default : tx_ns = IDLE;//可以不写
         endcase
     end
     //3.每个状态的输出

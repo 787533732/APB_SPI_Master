@@ -1,5 +1,9 @@
-module apb_spi_master (
-       
+module apb_spi_master 
+#(  
+    parameter FIFO_DEPTH   = 4,
+    parameter FIFO_DEPTH_W = 2
+)
+(   
     input   wire            pclk_i      ,
     input   wire            prstn_i     ,
     //apb接口
@@ -10,6 +14,7 @@ module apb_spi_master (
     input   wire [31:0]     pwdata_i    ,
     output  wire [31:0]     prdata_o    ,
     output  wire            pready_o    ,
+    output  wire            pslverr_o   ,
     //spi接口
     output  wire            sck         ,
     output  wire            mosi        ,
@@ -40,6 +45,7 @@ module apb_spi_master (
         .pwdata_i            (pwdata_i          ),
         .prdata_o            (prdata_o          ),
         .pready_o            (pready_o          ),
+        .pslverr_o           (pslverr_o         ),
         //spi
         .spi_data_rx_i       (spi_data_rx_o     ),
         .spi_data_rx_vld_i   (spi_data_rx_vld_o ),
@@ -51,7 +57,13 @@ module apb_spi_master (
         
         .eot_i               (eot_o             )
     );
-    fifo tx_fifo(
+    fifo 
+    #(  
+        .DEPTH               (FIFO_DEPTH        ),
+        .DEPTH_W             (FIFO_DEPTH_W      )
+    )
+    tx_fifo
+    (
         .clk_i               (pclk_i            ),
         .rstn_i              (prstn_i           ),      
          

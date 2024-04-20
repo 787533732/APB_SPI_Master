@@ -1,0 +1,22 @@
+*design* DebussyLib (btIdent Verdi_O-2018.09-SP2)
+Command arguments:
+    +define+verilog
+    +incdir+/include
+    /home/host/Project/finish/apb2spi/rtl/clk_gen.v
+    /home/host/Project/finish/apb2spi/rtl/spi_tx.v
+    /home/host/Project/finish/apb2spi/rtl/spi_rx.v
+    /home/host/Project/finish/apb2spi/rtl/spi_master_controller.v
+    /home/host/Project/finish/apb2spi/rtl/apb_spi_master.v
+    /home/host/Project/finish/apb2spi/rtl/fifo.v
+    /home/host/Project/finish/apb2spi/rtl/apb_interface.v
+    /home/host/Project/finish/apb2spi/rtl/apb_slave_mux.v
+    /home/host/Project/finish/apb2spi/rtl/top.v
+    /home/host/Project/finish/apb2spi/tb/top_tb.v
+
+
+*Warning* Task/Function Null portlist using parentheses.
+"/home/host/Project/finish/apb2spi/tb/top_tb.v", 88: 
+Highest level modules:
+top_tb
+
+Total	0 error(s),   1 warning(s)

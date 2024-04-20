@@ -16,6 +16,7 @@ module apb_interface (
     input   wire [31:0]     pwdata_i            ,
     output  reg  [31:0]     prdata_o            ,
     output  wire            pready_o            ,
+    output  wire            pslverr_o           ,
     //spi
     input   wire [31:0]     spi_data_rx_i       ,
     input   wire            spi_data_rx_vld_i   ,
@@ -27,11 +28,11 @@ module apb_interface (
     
     input   wire            eot_i           
 );
-    assign pready_o  = stream_data_rdy_i;//反压信号
+    assign pready_o = stream_data_rdy_i;//反压信号
 
     wire   wr_en;
     wire   rd_en;
-    assign wr_en = psel_i && penable_i && pwrite_i;
+    assign wr_en = psel_i && penable_i && pwrite_i && stream_data_rdy_i;//fifo未满
     assign rd_en = psel_i && penable_i && ~pwrite_i;
     
     reg  [31:0] regs[0:5];
@@ -99,4 +100,5 @@ module apb_interface (
     assign spi_clk_div_o = regs[`CTRL][15:8];
     assign spi_clk_div_vld_o = 1'b1;
 
+    assign pslverr_o = 1'b0;
 endmodule

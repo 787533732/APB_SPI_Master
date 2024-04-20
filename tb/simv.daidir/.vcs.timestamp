@@ -1,0 +1,186 @@
+0 
+43
++incdir+/include
++itf+/home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/vcsdp_lite.tab
++v2k
++vcsd1
++vpi
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/home/synopsys/vcs-mx/O-2018.09-1/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -rdynamic
+-Mobjects= /home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/libvirsim.so /home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/liberrorinf.so /home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/libsnpsmalloc.so /home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/libvfs.so
+-Mout=simv
+-Msaverestoreobj=/home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=/home/synopsys/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/pli.a -ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/home/synopsys/vcs-mx/O-2018.09-1/include
+-P
+-debug_acc+fsdb
+-debug_access+all
+-fsdb
+-full64
+-gen_obj
+-l
+-picarchive
+-timescale=1ns/1ns
+/home/host/Project/finish/apb2spi/rtl/apb_interface.v
+/home/host/Project/finish/apb2spi/rtl/apb_slave_mux.v
+/home/host/Project/finish/apb2spi/rtl/apb_spi_master.v
+/home/host/Project/finish/apb2spi/rtl/clk_gen.v
+/home/host/Project/finish/apb2spi/rtl/fifo.v
+/home/host/Project/finish/apb2spi/rtl/spi_master_controller.v
+/home/host/Project/finish/apb2spi/rtl/spi_rx.v
+/home/host/Project/finish/apb2spi/rtl/spi_tx.v
+/home/host/Project/finish/apb2spi/rtl/top.v
+/home/host/Project/finish/apb2spi/tb/top_tb.v
+/home/synopsys/vcs-mx/O-2018.09-1/linux64/bin/vcs1
+/home/synopsys/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/verdi.tab
+com.log
+119
+sysc_uni_pwd=/home/host/Project/finish/apb2spi/tb
+novas_args=-P /home/synopsys/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/novas.tab /home/synopsys/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/pli.a
+XMODIFIERS=@im=ibus
+XILINX_VIVADO=/home/Xilinx/Vivado/2019.1
+XDG_VTNR=1
+XDG_SESSION_TYPE=x11
+XDG_SESSION_ID=1
+XDG_SESSION_DESKTOP=gnome-classic
+XDG_SEAT=seat0
+XDG_RUNTIME_DIR=/run/user/1001
+XDG_MENU_PREFIX=gnome-
+XDG_DATA_DIRS=/home/host/.local/share/flatpak/exports/share/:/var/lib/flatpak/exports/share/:/usr/local/share/:/usr/share/
+XDG_CURRENT_DESKTOP=GNOME-Classic:GNOME
+XAUTHORITY=/run/gdm/auth-for-host-TroM3L/database
+WINDOWPATH=1
+VSCODE_GIT_IPC_HANDLE=/run/user/1001/vscode-git-e9b8747176.sock
+VSCODE_GIT_ASKPASS_NODE=/usr/share/code/code
+VSCODE_GIT_ASKPASS_MAIN=/usr/share/code/resources/app/extensions/git/dist/askpass-main.js
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=--ms-enable-electron-run-as-node
+VMR_MODE_FLAG=64
+VERDI_HOME=/home/synopsys/verdi/Verdi_O-2018.09-SP2
+VCS_MX_HOME_INTERNAL=1
+VCS_MODE_FLAG=64
+VCS_LOG_FILE=com.log
+VCS_HOME=/home/synopsys/vcs-mx/O-2018.09-1
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH_OVERRIDE=linux
+VCS_ARCH=linux64
+USERNAME=host
+UNAME=/bin/uname
+TOOL_HOME=/home/synopsys/vcs-mx/O-2018.09-1/linux64
+TERM_PROGRAM_VERSION=1.82.2
+TERM_PROGRAM=vscode
+SYNPLIFY_HOME=/home/synopsys/fpga/N-2018.03-SP1
+STARC_HOME=/home/synopsys/starrc/O-2018.06-SP1
+SSH_AUTH_SOCK=/run/user/1001/keyring/ssh
+SSH_AGENT_PID=3186
+SPYGLASS_HOME=/home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/
+SPECMAN_HOME=/home/cadence/INCISIVE152/components/sn
+SPECMAN_DIR=/home/cadence/INCISIVE152/components/sn/
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/3051,unix/unix:/tmp/.ICE-unix/3051
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+SCL_HOME=/home/synopsys/scl/2018.06
+SBX_CHROME_API_RQ=1
+SANDBOX_LD_LIBRARY_PATH=/home/mentor//calibre2019/aoj_cal_2019.3_15.11/shared/pkgs/icv/tools/calibre_client/lib/64:/home/cadence/INCISIVE152/tools.lnx86/lib
+RISCV=/home/Riscv_Tools
+QUESTASIM_HOME=/home/mentor/questasim
+QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins
+QT_IM_MODULE=ibus
+QT_GRAPHICSSYSTEM_CHECKED=1
+QTLIB=/usr/lib/qt-3.3/lib
+QTINC=/usr/lib/qt-3.3/include
+QTDIR=/usr/lib/qt-3.3
+QEMU_HOME=/home/Riscv_Tools/riscv-gnu-toolchain/qemu-6.0.0
+PT_HOME=/home/synopsys/pts/O-2018.06-SP1
+OVA_UUM=0
+ORIGINAL_XDG_CURRENT_DESKTOP=GNOME-Classic:GNOME
+NO_AT_BRIDGE=1
+NOVAS_RC=/home/synopsys/verdi/novas.rc
+NOVAS_PLI=/home/synopsys/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64
+NOVAS_HOME=/home/synopsys/verdi/Verdi_O-2018.09-SP2
+NOVAS=/home/synopsys/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64
+NLINT_HOME=/home/synopsys/nlint
+MMSIMHOME=/home/cadence/SPECTRE181
+MILKWAY_HOME=/home/synopsys/milkway_201506
+MGLS_LICENSE_FILE=/home/mentor//license/license.dat:/home/mentor/questasim/mentor.dat
+MGC_LICENSE_FILE=/home/mentor//license/license.dat
+MGC_LIB_PATH=/home/mentor//calibre2019/aoj_cal_2019.3_15.11/lib
+MGC_HOME=/home/mentor//calibre2019/aoj_cal_2019.3_15.11
+MGC_CALIBRE_SCHEMATIC_SERVER=127.0.0.1:9199
+MGC_CALIBRE_SAVE_ALL_RUNSET_VALUES=1
+MGC_CALIBRE_REALTIME_VIRTUOSO_SAVE_MESSENGER_CELL=1
+MGC_CALIBRE_REALTIME_VIRTUOSO_ENABLED=1
+MGC_CALIBRE_LAYOUT_SERVER=127.0.0.1:9189
+MFLAGS=
+MENTOR_HOME=/home/mentor/
+MAKE_TERMOUT=/dev/pts/0
+MAKE_TERMERR=/dev/pts/0
+MAKELEVEL=1
+MAKEFLAGS=
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_HOME=/home/synopsys/lc/O-2018.06-SP1
+LC_ALL=C
+KDEDIRS=/usr
+INNOVUS_HOME=/home/cadence/INNOVUS
+INCISIVE_HOME=/home/cadence/INCISIVE152
+IMSETTINGS_MODULE=none
+IMSETTINGS_INTEGRATE_DESKTOP=yes
+IDENTIFY_HOME=/home/synopsys/identify/N-2018.03-SP1
+ICC_HOME=/home/synopsys/icc/O-2018.06-SP1
+ICC2_HOME=/home/synopsys/icc2/O-2018.06-SP1
+HSPICE_HOME=/home/synopsys/hspice/N-2017.12-SP2/hspice
+HISTCONTROL=ignoredups
+GNOME_SHELL_SESSION_MODE=classic
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GIT_ASKPASS=/usr/share/code/resources/app/extensions/git/dist/askpass.sh
+GIO_LAUNCHED_DESKTOP_FILE_PID=9887
+GIO_LAUNCHED_DESKTOP_FILE=/usr/share/applications/code.desktop
+GDM_LANG=zh_CN.UTF-8
+GDMSESSION=gnome-classic
+GDK_BACKEND=x11
+FORMALITY_HOME=/home/synopsys/fm/O-2018.06-SP1
+DVE_HOME=/home/synopsys/vcs-mx/O-2018.09-1
+DESKTOP_SESSION=gnome-classic
+DC_HOME=/home/synopsys/syn/O-2018.06-SP1
+DBUS_STARTER_BUS_TYPE=session
+DBUS_STARTER_ADDRESS=unix:abstract=/tmp/dbus-2FHt4KRtbq,guid=977dfacd7ea81dae16f1d98766213235
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-2FHt4KRtbq,guid=977dfacd7ea81dae16f1d98766213235
+CX_HOME=/home/synopsys/wv/N-2017.12-SP2
+CUSTOMCOMPILER_HOME=/home/synopsys/customcompiler/N-2017.12-SP1-2
+COLORTERM=truecolor
+CHROME_DESKTOP=code-url-handler.desktop
+CDS_LIC_FILE=/home/cadence/license/cadence.dat
+CDSHOME=/home/cadence/IC618
+CALIBRE_HOME=/home/mentor//calibre2019/aoj_cal_2019.3_15.11
+CALIBRE_ENABLE_SKILL_PEXBA_MODE=1
+CADHOME=/home/cadence
+0
+12
+1713606879 /home/host/Project/finish/apb2spi/tb/top_tb.v
+1713590503 /home/host/Project/finish/apb2spi/rtl/top.v
+1713593983 /home/host/Project/finish/apb2spi/rtl/apb_slave_mux.v
+1713605785 /home/host/Project/finish/apb2spi/rtl/apb_interface.v
+1713520056 /home/host/Project/finish/apb2spi/rtl/fifo.v
+1713542566 /home/host/Project/finish/apb2spi/rtl/apb_spi_master.v
+1710757191 /home/host/Project/finish/apb2spi/rtl/spi_master_controller.v
+1710757105 /home/host/Project/finish/apb2spi/rtl/spi_rx.v
+1713531512 /home/host/Project/finish/apb2spi/rtl/spi_tx.v
+1710752566 /home/host/Project/finish/apb2spi/rtl/clk_gen.v
+1550753332 /home/synopsys/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/verdi.tab
+1539400757 /home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/vcsdp_lite.tab
+4
+1539402341 /home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/libvirsim.so
+1539401183 /home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/liberrorinf.so
+1539401125 /home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/libsnpsmalloc.so
+1539401175 /home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/libvfs.so
+1713606882 simv.daidir
+-1 partitionlib
