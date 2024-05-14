@@ -28,13 +28,11 @@ module apb_interface (
     
     input   wire            eot_i           
 );
-    assign pready_o = stream_data_rdy_i;//反压信号
-
-    wire   wr_en;
-    wire   rd_en;
-    assign wr_en = psel_i && penable_i && pwrite_i && stream_data_rdy_i;//fifo未满
-    assign rd_en = psel_i && penable_i && ~pwrite_i;
     
+    wire wr_en = psel_i && penable_i && pwrite_i && stream_data_rdy_i;//fifo未满
+    wire rd_en = psel_i && penable_i && ~pwrite_i;
+    assign pready_o = wr_en || rd_en;//反压信号
+
     reg  [31:0] regs[0:5];
     wire [2:0]  addr_offset;
     assign addr_offset = paddr_i[31:2];//除以4
@@ -47,7 +45,7 @@ module apb_interface (
             regs[`WDATA] <= 'h0;   
             regs[`CTRL ] <= 'h0;
         end else if(eot_i) begin
-            regs[`CTRL][0] <= 1'b0;//???
+            regs[`CTRL][0] <= 1'b0;
         end else if(wr_en) begin
             case (addr_offset)
                 `CMD   : regs[`CMD  ] <= pwdata_i;
@@ -84,7 +82,7 @@ module apb_interface (
 
     //output to spi_tx
     assign stream_data_o = {regs[`CMD][3:0], regs[`ADDR][3:0], regs[`LEN][7:0], regs[`WDATA][15:0]};
-    //让输出给发送模块的数据有效信号多保持一个时钟，让FIFO捕获
+
     reg  valid ;
     wire valid_last;
     assign  valid_last = regs[`CTRL][0];
@@ -92,10 +90,11 @@ module apb_interface (
     always @(posedge pclk_i or negedge prstn_i) begin
         if(!prstn_i)
             valid <= 1'b0;
-        else
+        else    //让输出给发送模块的数据有效信号多保持一个时钟，让FIFO捕获
             valid <= valid_last;
     end
-    assign stream_data_vld_o = ~valid && valid_last ;
+    assign stream_data_vld_o = ~valid && valid_last;//上升沿检测
+
 
     assign spi_clk_div_o = regs[`CTRL][15:8];
     assign spi_clk_div_vld_o = 1'b1;

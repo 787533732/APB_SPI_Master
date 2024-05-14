@@ -89,7 +89,7 @@ module apb_slave_mux
                    ({32{dec[2]}} & {32{en[2]}} & PRDATA2) |
                    ({32{dec[3]}} & {32{en[3]}} & PRDATA3);
                    
-  assign PREADY  = ~PSEL |
+  assign PREADY  = //~PSEL |
                    (dec[0] & (PREADY0 | ~en[0])) |
                    (dec[1] & (PREADY1 | ~en[1])) |
                    (dec[2] & (PREADY2 | ~en[2])) |

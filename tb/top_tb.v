@@ -26,8 +26,42 @@ initial
         prstn_i = 1'b0;
         #20
         prstn_i = 1'b1;
-        #90000
-        repeat(200) #400 miso = $random / 2;//模拟输入
+        #96090
+        //repeat(200) #400 miso = $random / 2;//模拟输入
+        miso = 1'b1;
+        #400
+        miso = 1'b1;
+        #400
+        miso = 1'b1;
+        #400
+        miso = 1'b1;
+        #400
+        miso = 1'b0;
+        #400
+        miso = 1'b0;
+        #400
+        miso = 1'b0;
+        #400
+        miso = 1'b0;
+        #400
+        miso = 1'b0;
+        #400
+        miso = 1'b0;
+        #400
+        miso = 1'b0;
+        #400
+        miso = 1'b0;
+        #400
+        miso = 1'b1;
+        #400
+        miso = 1'b1;
+        #400
+        miso = 1'b1;
+        #400
+        miso = 1'b1;
+        #400
+        miso = 1'b0;
+
     end
 always #10 pclk_i = ~pclk_i;
 //写操作
@@ -130,6 +164,7 @@ initial begin
     write_num(32'h0000_9999);*/
     //读测试
     #80000
+
     read_num;
     #10000
     read_num;
@@ -137,7 +172,7 @@ initial begin
     read_num;
     #10000
     read_num;
-    #20000  
+    #200000  
     $finish;
 end
 

@@ -44,11 +44,13 @@ module fifo
 
     always @(posedge clk_i or negedge rstn_i) begin
         if(!rstn_i)
-            read_cnt <= 2'b0;
-        else if(read_cnt == 3'd2)
-            read_cnt <= 2'b0;
-        else
-            read_cnt <= read_cnt + 1;
+            read_cnt <= 2'd0;
+        else if(data_vld_o) begin
+            if(read_cnt == 3'd2)
+                read_cnt <= 2'd0;
+            else if(data_rdy_i)
+                read_cnt <= read_cnt + 1;
+        end
     end
 //读写指针的维护
     //写使能时，未满可写
@@ -67,7 +69,7 @@ module fifo
         if(!rstn_i) begin
             rd_point <= {(DEPTH_W+1){1'b0}};
         end
-        else if(rd_en && !empty &&(read_cnt == 1'b1)) begin
+        else if(rd_en && !empty &&(read_cnt == 2'd2)) begin
             if(rd_point < {(DEPTH_W+1){1'b1}}) begin
                 rd_point <= rd_point + 1;
             end
